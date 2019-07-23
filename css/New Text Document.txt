@@ -1,0 +1,7 @@
+body{
+background-image: url(./images/cowbg1.jpg);
+background-repeat: no-repeat;
+background-attatchment:fixed;
+background-size: cover;
+background-color: #464646;
+ }

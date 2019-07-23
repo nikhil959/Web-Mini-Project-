@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+
+<head>
+</head>
+<script>
+
+</script>
+<link rel="stylesheet" href="./css/signup.css"/>
+<link rel="stylesheet" href="./css/login.css"/>
+<style>
+
+
+
+</style>
+<body>
+<div class="nav">
+  <li  style="margin-top:10px; font-size:25px"><a  href="index.html"><img src="./images/home1.png" width="40" height="40" alt=""></a></li>
+  <center>
+  <h2 style="color:  #FFFFFF;align:center;font-family: sans-serif;margin-top:15px; font-size:25px">Owner<span style="color:#40C82A;"> Information</span></h2>
+  </center>
+</div>
+
+
+<div class="nat">
+
+<center>
+
+<h2 style=" font-size:20px">Select the type of Animal</h2>
+</center>
+
+
+<form action="upload.php" method="POST" enctype="multipart/form-data">
+
+
+<label class="container1">Cows
+  <input align="center" type="radio" name="Cows" value="cows">
+  <span class="checkmark"></span>
+</label>
+<label class="container1">Buffalos
+  <input type="radio" name="Cows" value="buffalos">
+  <span class="checkmark"></span>
+</label>
+<label class="container1">Goats
+  <input type="radio" name="Cows" value="goats">
+  <span class="checkmark"></span>
+</label>
+<label class="container1">Sheep
+  <input type="radio" name="Cows" value="sheep">
+  <span class="checkmark"></span>
+</label>
+<label class="container1">Camels
+  <input type="radio" name="Cows" value="camels">
+  <span class="checkmark"></span>
+</label>
+<label class="container1">Donkeys
+  <input type="radio" name="Cows" value="donkeys">
+  <span class="checkmark"></span>
+</label>
+<label class="container1">Chickens
+  <input type="radio" name="Cows" value="chickens">
+  <span class="checkmark"></span>
+</label>
+
+
+
+<center>
+<label style=" font-size:20px" for="fileupload"> Select Image File to Upload</label>
+
+
+
+<input type="file" name="file" value="fileupload" id="fileupload"></s8>
+</center>
+
+<input  required="required" type="text" maxlength="20"  placeholder="Breed Name" name="breedname"/>
+<input  required="required" type="number"   placeholder="Enter No of Counts" name="count"/>
+<input  required="required" type="text" maxlength="23"  placeholder="Owner's Name" name="ownername"/>
+<input  required="required" type="email"  placeholder="Owner's Email" name="email"/>
+<input  required="required" type="text" maxlength="10"  placeholder="Owner's Aadharcard No" name="adharcardno"/>
+<input  required="required" type="tel" pattern="^\d{10}$" placeholder="Owner's PhoneNumber"    name="phonenumber"/>
+<input  required="required" type="text" maxlength="25"  placeholder="Owner's location" name="location"/>
+<button value="Post" class="button" name="submit" type="submit">Upload</button>
+</form>
+</div>
+
+
+
+
+
+</body>
+</html>

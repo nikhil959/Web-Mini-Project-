@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+
+<head>
+
+
+
+
+<script type="text/javascript" src="./scripts/login.js?v=1"></script>
+
+</head>
+
+
+<link rel="stylesheet" href="./css/backg.css"/>
+<link rel="stylesheet" href="./css/login.css"/>
+<style>
+
+.container-fluid{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto; }
+ #About  {padding-top:80px;height:500px;color: #fff; background-color: #2B2B1E;}
+ #Contact {padding-top:80px;height:500px;color: #fff; background-color: #2B2B1E;}
+  #Copyright {padding-top:35px;height:50px;color: #fff; background-color: #000000;}
+ 
+
+#copyright {
+height:20px;width:55%;
+background: #333;
+position:absolute;
+bottom:50px;
+left:0;
+right:0;
+margin-left:auto;
+margin-right:auto;
+color:#FFFFFF;
+font: normal 13px verdana, sans-serif;
+border-top:2px solid #FF9966;
+}
+
+
+.about(
+
+   width:1200px;
+background:	#ecf0f1;
+height:600px;
+margin-top: 50;
+opacity:0.5;
+margin-left: auto;
+margin-right: auto;
+overflow: scroll;
+)
+
+
+
+
+ </style>
+ 
+<body>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+<ul>
+  <li style="font-weight: 1200;font-family:verdana;float:left; font-size:25px"><a href="home.html">Desi Cattle Census Platform</a></li>
+  
+  <li style="font-size:25px;font-family:serif;"><a href="#Contact">Contact</a></li>
+  <li style="font-size:25px;font-family:serif;"><a href="#About">About</a></li>
+  <li  style="font-size:25px;font-family:serif;"><a class="active" href="#about"onclick="document.getElementById('id01').style.display='block'">Sign in</a></li>
+   <li style="font-size:25px;font-family:serif;"><a href="search.html"><label>Search</label></a></li>
+</ul>
+</nav>
+<div>
+</div>
+<div class="nat">
+<center>
+    <p  style="font-size:90px; font-family: Fantasy;">Desi Cattle Cen<span style="color:  #40C82A">sus Platform</span></p>
+	<br>
+	</center>
+	<p style="font-size:25px;text-align: justify;text-align-last: center;font-family:verdana"><u> Go Desi,<span style="color:  #40C82A">Go Natural</span></u></p>
+  </div>
+
+
+<div id="About" class="container-fluid">
+  <center>
+<h1><span style="color:  #40C82A;font-family: sans-serif;">About</span> <span style="font-family: sans-serif;">Us</span></h1>
+<br>
+<br>
+</center>
+<div class="about">
+  <center><p>
+The living sages of India teach us a wisdom that cannot be taught by <br>our universities and the priceless culture of our country disseminate from them.<br>
+To create awareness of overcoming the disadvantages of farming western breeds<br> ,we are creating a Census platform ,where we can have a count on desi Breeds<br> Across India and helping people to reach respective owners<br> and encourage them to start breeding Desi animals,instead of western Breed.
+<br></p>
+</center>
+</div>
+</div>
+
+<div id="Contact" class="container-fluid">
+  <center>
+  <h1><span style="font-family: sans-serif;">Feel free to</span> <span style="color:  #40C82A;font-family: sans-serif;">Contact Us</span></h1>
+  <br>
+  <br>
+    </center>
+ <div >
+  <form method="post"action="email.php">
+    <center>
+    
+    <input style=" width:500px;" type="text" id="fname" name="firstname" placeholder=" Enter Your Firstname..">
+	<br>
+
+
+    <input style=" width:500px" type="text" id="lname" name="lastname" placeholder="Enter Your Lastname..">
+	<br>
+
+    <input style=" width:500px" type="text" id="email" name="email" placeholder="Enter Your Email">
+	<br>
+	<br>
+
+
+    <textarea id="subject" name="subject" placeholder="Write something.." style="height:100px; width:500px"></textarea>
+	<br>
+	
+
+    <button style=" width:500px" type="submit">Submit</button>
+	  </center>
+  </form>
+</div>
+
+
+</div>
+
+
+<div id="Copyright" class="container-fluid">
+<center>
+  <p style=" font-weight: 999;">ALL RIGHTS RESERVED COPYRIGHT &copy 2018</p>
+  
+  </center>
+  
+</div>
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" method="post" action="signin.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="login.png"  alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+   
+      <input type="text" placeholder="Enter Username" name="uname" required>
+
+    
+      <input type="password" placeholder="Enter Password" name="psw" required>
+        
+      <button  name="submit" type="submit">Login</button>
+      
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+	  <button  type="button" onclick="document.getElementById('id02').style.display='block'" class="signupbtn">Sign up</button>
+      
+    </div>
+  </form>
+</div>
+
+
+<div id="id02" class="modal2">
+  
+  <form class="modal-content animate" method="post" action="signup.php">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal2">&times;</span>
+      <img src="login.png"  alt="Avatar" class="avatar">
+    </div>
+
+    <div class="container">
+     
+      <input type="text" placeholder="Enter Username" name="user_name" required>
+	 
+      <input type="email" placeholder="Enter Email Address" name="e-mail" required>
+	 
+      <input type="tel" pattern="^\d{10}$" placeholder="Enter PhoneNumber" name="phone_number" required>
+
+
+      <input type="password" placeholder="Enter Password" name="password" required>
+        
+
+      
+    </div>
+
+    <div class="container" style="background-color:#f1f1f1">
+      <button type="button" onclick="document.getElementById('id02').style.display='none'" class="cancelbtn">Cancel</button>
+	  <button onclick="window.location.href='upload.html'" type="button" onclick="document.getElementById('id01').style.display='none'" class="signupbtn">Sign up</button>
+      
+    </div>
+  </form>
+</div>
+
+
+
+</body>
+</html>

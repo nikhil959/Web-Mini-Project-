@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="./css/signup.css"/>
+<script>
+function showUser(str) {
+    if (str == "") {
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else { 
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (this.readyState == 4 && this.status == 200) {
+                document.getElementById("txtHint").innerHTML = this.responseText;
+            }
+        };
+        xmlhttp.open("GET","search.php?q="+str,true);
+        xmlhttp.send();
+    }
+}
+</script>
+
+<style>
+.nar{
+width:1000px;
+background:#2B2B1E;
+height:500px;
+margin-top: 55px;
+opacity:1;
+margin-left: auto;
+margin-right: auto;
+
+
+}
+
+.nav input[type=text] {
+  float: left;
+  padding: 6px;
+  margin-top: 13px;
+  margin-right: 16px;
+  border: none;
+  font-size: 17px;
+  
+  
+  .nav input[type=number] {
+  float: left;
+  padding: 6px;
+  margin-top: 10px;
+  margin-right: 16px;
+  border: none;
+  font-size: 17px;
+ 
+  
+}
+
+
+li {
+    float: left;
+	margin-top: 8px;
+}
+</style>
+<body>
+<div class="nav">
+<form>
+  <li  style="margin-top:10px;  font-size:25px"><a  href="index.html"><img src="./images/home1.png" width="40" height="40" alt=""></a>Home</li>
+  <input type="text" name="cows" oninput="showUser(this.value)"placeholder="Enter type of Animal">
+
+ 
+</form>
+  </div>
+
+<div class="nar" id="txtHint">
+
+
+
+
+</div>
+</body>
+</html>
